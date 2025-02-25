@@ -9,7 +9,7 @@ body {
 /* Navbar */
 .navbar {
     padding: 1.5rem 2rem;
-    background: #ffffff;
+    background: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -64,27 +64,48 @@ body {
 /* Hero */
 .hero {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    /*background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);*/
+    background-image: url('/imagenes/hero1.jpg');
+    background-size: cover;
+    background-position: center;
     color: #ecf0f1;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 3rem; /* Tamaño generoso para destacar */
+    font-family: 'Montserrat', sans-serif; /* Tipografía elegante y moderna */
+    font-weight: 700; /* Negrita para impacto visual */
+    text-decoration-skip-ink: auto; /* Corrige la propiedad que tenía un guion de más */
+    color: #ffffff; /* Blanco como base para que resalte */
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4); /* Gradiente vibrante */
+    -webkit-background-clip: text; /* Aplica el gradiente al texto (para navegadores Webkit) */
+    background-clip: text; /* Aplica el gradiente al texto */
+    color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidad */
+    padding: 0.2em 0.5em; /* Espaciado interno para un efecto "bloque" */
+    border-radius: 10px; /* Bordes redondeados sutiles */
+    display: inline-block; /* Para que el fondo y padding se ajusten al texto */
+    animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero p {
     font-size: 1.5rem;
     max-width: 800px;
-    margin: 0 auto 30px;
+    text-align: right; /* Centra el texto horizontalmente */
+    margin: 0 auto;  /*Centra el bloque del párrafo horizontalmente */
+    margin-top: 150px; /* Lo mueve hacia abajo, ajusta el valor según necesites */
 }
 
 .btn-cta {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: #A6C288;
+    background: #305AC2;
     color: #ffffff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -94,7 +115,7 @@ body {
 }
 
 .btn-cta:hover {
-    background: #5cb722;
+    background: #6CD8FF;
     transform: scale(1.05);
 }
 
@@ -369,6 +390,166 @@ body {
     }
 }
 
+/* Sección de Contacto Mejorada */
+.contacto {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23A6C288" stroke-width="1" opacity="0.2"/></svg>');
+    background-size: 150px 150px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.contacto .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto .seccion-titulo {
+    color: #293f76;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.contacto .seccion-titulo::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #A6C288;
+    border-radius: 2px;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.contacto-opciones {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+}
+
+.contacto-opcion {
+    flex: 0 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contacto-opcion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contacto-opcion i {
+    font-size: 2.5rem;
+    color: #0088cc;
+    margin-bottom: 15px;
+}
+
+.contacto-opcion h3 {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.contacto-opcion p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contacto .btn-cta {
+    padding: 1rem 2.5rem;
+    background: #0088cc;
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto .btn-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+.contacto .btn-cta:hover::before {
+    left: 100%;
+}
+
+.contacto .btn-cta:hover {
+    background: #006699;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 767px) {
+    .contacto {
+        padding: 50px 15px;
+    }
+    
+    .contacto-opciones {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .contacto-opcion {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Para pantallas medianas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contacto-opciones {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .contacto-opcion {
+        width: 180px; /* Ligeramente más pequeñas en pantallas medianas */
+    }
+}
 /* Footer */
 footer {
     padding: 20px 20px; /* Altura más estrecha */
