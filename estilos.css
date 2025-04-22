@@ -4,6 +4,19 @@ body {
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --color-primary: #2c3e50; /* Dark text/backgrounds */
+    --color-secondary: #f8f9fa; /* Light backgrounds */
+    --color-accent-telegram: #0088cc; /* Telegram blue */
+    --color-accent-highlight: #A6C288; /* Green/Teal highlight */
+    --color-white: #ffffff;
+    --color-gray-text: #666;
+    --color-dark-telegram: #0056a3; /* Darker Telegram blue for hover */
+    --color-light-highlight: #eaf4e9; /* Light highlight for group items */
+    --color-dark-secondary: #dee2e6; /* Darker secondary for contact gradient */
 }
 
 /* Navbar */
@@ -46,7 +59,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c3e50;
+    color: var(--color-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
@@ -56,8 +69,8 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #ffffff;
-    background: #A6C288; /* Verde vibrante */
+    color: var(--color-white);
+    background: var(--color-accent-highlight); /* Verde vibrante */
     border-radius: 25px;
 }
 
@@ -65,10 +78,10 @@ body {
 .hero {
     padding: 100px 20px;
     /*background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);*/
-    background-image: url('/imagenes/hero1.jpg');
+    background-image: url('imagenes/hero1.jpg');
     background-size: cover;
     background-position: center;
-    color: #ecf0f1;
+    color: var(--color-white);
 }
 
 .hero h1 {
@@ -76,8 +89,8 @@ body {
     font-family: 'Montserrat', sans-serif; /* Tipografía elegante y moderna */
     font-weight: 700; /* Negrita para impacto visual */
     text-decoration-skip-ink: auto; /* Corrige la propiedad que tenía un guion de más */
-    color: #ffffff; /* Blanco como base para que resalte */
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4); /* Gradiente vibrante */
+    color: var(--color-white); /* Blanco como base para que resalte */
+    background: linear-gradient(135deg, var(--color-accent-highlight), #7cb97c); /* Gradiente vibrante */
     -webkit-background-clip: text; /* Aplica el gradiente al texto (para navegadores Webkit) */
     background-clip: text; /* Aplica el gradiente al texto */
     color: transparent; /* Hace el texto transparente para mostrar el gradiente */
@@ -97,15 +110,14 @@ body {
 .hero p {
     font-size: 1.5rem;
     max-width: 800px;
-    text-align: right; /* Centra el texto horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
     margin: 0 auto;  /*Centra el bloque del párrafo horizontalmente */
-    margin-top: 150px; /* Lo mueve hacia abajo, ajusta el valor según necesites */
 }
 
 .btn-cta {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: #305AC2;
+    background: var(--color-accent-telegram);
     color: #ffffff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -115,27 +127,27 @@ body {
 }
 
 .btn-cta:hover {
-    background: #6CD8FF;
+    background: var(--color-accent-highlight);
     transform: scale(1.05);
 }
 
 /* Grupos */
 .grupos {
     padding: 80px 20px;
-    background: #f8f9fa;
+    background: var(--color-secondary);
 }
 
 .seccion-titulo {
     font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-primary);
     text-align: center;
     margin-bottom: 40px;
 }
 
 .grupo-item {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -152,13 +164,13 @@ body {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-primary);
     margin-bottom: 15px;
 }
 
 .grupo-item p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--color-gray-text);
     margin-bottom: 20px;
 }
 
@@ -167,7 +179,7 @@ body {
     align-items: center;
     gap: 8px;
     padding: 0.8rem 1.5rem;
-    background: #0088cc; /* Azul de Telegram */
+    background: var(--color-accent-telegram); /* Azul de Telegram */
     color: #ffffff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -177,7 +189,7 @@ body {
 }
 
 .btn-grupo:hover {
-    background: #006699;
+    background: var(--color-dark-telegram);
     transform: scale(1.05);
 }
 
@@ -188,20 +200,20 @@ body {
 
 .tutoriales {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: #ecf0f1;
+    color: var(--color-white);
 }
 
 
 
 .social-links a {
-    color: #ecf0f1;
+    color: var(--color-white);
     font-size: 1.5rem;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #A6C288;
+    color: var(--color-accent-highlight);
 }
 
 /* Media Queries */
@@ -241,12 +253,6 @@ body {
     }
 }
 
-/* Grupos */
-.grupos {
-    padding: 60px 20px; /* Padding reducido */
-    background: #f8f9fa;
-    
-}
 
 .grupos .container {
     max-width: 1200px;
@@ -257,16 +263,16 @@ body {
     font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #293f76;
+    color: var(--color-primary);
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px #2c3e50;
+    text-shadow: 2px 2px 4px var(--color-primary);
 }
 
 .grupos .grupo-item {
-    background: #e1f5f3;
+    background: var(--color-light-highlight);
     border-radius: 10px; /* Bordes más pequeños */
     padding: 15px; /* Padding reducido */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
@@ -281,21 +287,21 @@ body {
 .grupos .grupo-item:hover {
     transform: translateY(-3px); /* Elevación más sutil */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    background: #f1f5f9;
+    background: var(--color-secondary);
 }
 
 .grupos .grupo-item h3 {
     font-size: 1.3rem; /* Título más pequeño */
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .grupos .grupo-item p {
     font-size: 0.9rem; /* Texto más pequeño */
     font-family: 'Quicksand', sans-serif;
-    color: #666;
+    color: var(--color-gray-text);
     line-height: 1.5;
     margin-bottom: 15px;
 }
@@ -318,7 +324,7 @@ body {
     align-items: center;
     gap: 6px;
     padding: 0.6rem 1.2rem; /* Botón más pequeño */
-    background: #0088cc;
+    background: var(--color-accent-telegram);
     color: #ffffff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -329,7 +335,7 @@ body {
 }
 
 .grupos .btn-grupo:hover {
-    background: #006699;
+    background: var(--color-dark-telegram);
     transform: scale(1.05);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -358,9 +364,6 @@ body {
 
 /* Responsividad para móviles */
 @media (max-width: 767px) {
-    .grupos {
-        padding: 30px 15px;
-    }
 
     .grupos .seccion-titulo {
         font-size: 1.8rem;
@@ -393,7 +396,7 @@ body {
 /* Sección de Contacto Mejorada */
 .contacto {
     padding: 80px 20px;
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-dark-secondary));
     position: relative;
     overflow: hidden;
 }
@@ -419,7 +422,7 @@ body {
 }
 
 .contacto .seccion-titulo {
-    color: #293f76;
+    color: var(--color-primary);
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
@@ -433,14 +436,14 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: #A6C288;
+    background: var(--color-accent-highlight);
     border-radius: 2px;
 }
 
 .contacto p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #2c3e50;
+    color: var(--color-primary);
 }
 
 .contacto-opciones {
@@ -458,7 +461,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--color-white);
     padding: 25px 15px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -472,7 +475,7 @@ body {
 
 .contacto-opcion i {
     font-size: 2.5rem;
-    color: #0088cc;
+    color: var(--color-accent-telegram);
     margin-bottom: 15px;
 }
 
@@ -480,21 +483,108 @@ body {
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-primary);
     margin-bottom: 8px;
 }
 
 .contacto-opcion p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--color-gray-text);
     margin-bottom: 0;
     text-align: center;
 }
 
 .contacto .btn-cta {
     padding: 1rem 2.5rem;
-    background: #0088cc;
+    background: var(--color-accent-telegram);
     border: none;
+}
+
+/* Estilos para el formulario de contacto */
+#contact-form {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-dark-secondary);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    border-color: var(--color-accent-highlight);
+    outline: none;
+    box-shadow: 0 0 8px rgba(166, 194, 136, 0.3);
+}
+
+#contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 150px;
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--color-accent-telegram);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: var(--color-dark-telegram);
+    transform: translateY(-2px);
+}
+
+/* Responsividad para el formulario */
+@media (max-width: 767px) {
+    #contact-form {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    #contact-form button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+.contacto .btn-cta {
     font-size: 1.1rem;
     margin-top: 10px;
     position: relative;
