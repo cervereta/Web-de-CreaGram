@@ -9,150 +9,346 @@
     <link rel="shortcut icon" href="imagenes/nuevologo4.ico" type="image/x-icon">
     <!-- Bootstrap Icons para íconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Fuentes de Google mejoradas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
+        <p>Cargando CreaGram...</p>
+    </div>
+
     <!-- Header -->
-    <header class="navbar seccion-clara">
+    <header class="navbar" id="navbar">
         <nav class="container">
             <a href="#" class="navbar-brand">
                 <img src="imagenes/logo4.png" alt="Logo CreaGram">
+                <span class="brand-text">CreaGram</span>
             </a>
-            <ul class="nav-links">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#grupos" class="nav-link">Grupos</a></li>
                 <li><a href="#tutoriales" class="nav-link">Tutoriales</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero (Bienvenida) -->
-
-    <section id="inicio" class="hero seccion-oscura">
-        <div class="container text-center">
-            <h1>Bienvenidos a CreaGram</h1>
-            <p>Únete a nuestra comunidad en Telegram y descubre los mejores grupos para aprender, compartir y crecer juntos.</p>
-            <a href="https://t.me/creagramES" target="_blank" rel="noopener noreferrer" class="btn-cta">Visita el Canal</a>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-badge">🚀 Únete a la comunidad más activa</div>
+                <h1 class="hero-title">
+                    Bienvenidos a <span class="gradient-text">CreaGram</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Descubre nuestra vibrante comunidad en Telegram donde conectamos personas, 
+                    compartimos conocimientos y creamos oportunidades increíbles.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://t.me/creagramES" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        <i class="bi bi-telegram"></i>
+                        Visitar Canal Principal
+                    </a>
+                    <a href="#grupos" class="btn-secondary">
+                        <i class="bi bi-collection"></i>
+                        Explorar Grupos
+                    </a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <span class="stat-number">5K+</span>
+                        <span class="stat-label">Miembros Activos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Grupos Especializados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Comunidad Activa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
     </section>
 
     <!-- Grupos -->
-    <section id="grupos" class="grupos seccion-clara">
+    <section id="grupos" class="grupos">
         <div class="container">
-            <h2 class="seccion-titulo">Nuestros Grupos y Canales en Telegram</h2>
-            <div class="row g-4">
-                <!-- Ejemplo de grupo, repite este bloque por cada grupo -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="grupo-item">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Nuestras Comunidades</span>
+                <h2 class="section-title">Grupos y Canales Especializados</h2>
+                <p class="section-description">
+                    Encuentra el grupo perfecto para tus intereses y conecta con personas que comparten tus pasiones.
+                </p>
+            </div>
+            
+            <div class="grupos-grid">
+                <div class="grupo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="grupo-header">
+                        <div class="grupo-icon">
+                            <img src="imagenes/nuevologo2.png" alt="CreaGram Dev">
+                        </div>
+                        <div class="grupo-badge">Desarrollo</div>
+                    </div>
+                    <div class="grupo-content">
                         <h3>CreaGram Dev</h3>
-                        <p>Comunidad para desarrolladores: HTML, CSS, JS y más.</p>
-                        <img class="icons" src="imagenes/nuevologo2.png" alt="">
+                        <p>Comunidad para desarrolladores: HTML, CSS, JavaScript, frameworks modernos y las últimas tendencias en desarrollo web.</p>
+                        <div class="grupo-stats">
+                            <span><i class="bi bi-people"></i> 1.2K miembros</span>
+                            <span><i class="bi bi-chat"></i> Muy activo</span>
+                        </div>
+                    </div>
+                    <div class="grupo-footer">
                         <a href="https://t.me/CreaGramGrupo" target="_blank" rel="noopener noreferrer" class="btn-grupo">
-                            Unirme <i class="bi bi-telegram"></i>
+                            <i class="bi bi-telegram"></i>
+                            Unirse al Grupo
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="grupo-item">
-                        <h3>Coches Segunda Mano y Alquiler</h3>
-                        <p>Comunidad para la Venta y Alquier de coches de segunda mano</p>
-                        <img src="imagenes/grupocoche.png" alt="">
+
+                <div class="grupo-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="grupo-header">
+                        <div class="grupo-icon">
+                            <img src="imagenes/grupocoche.png" alt="Coches">
+                        </div>
+                        <div class="grupo-badge">Automoción</div>
+                    </div>
+                    <div class="grupo-content">
+                        <h3>Coches Segunda Mano</h3>
+                        <p>Comunidad para la compra, venta y alquiler de coches de segunda mano. Encuentra las mejores ofertas y consejos.</p>
+                        <div class="grupo-stats">
+                            <span><i class="bi bi-people"></i> 850 miembros</span>
+                            <span><i class="bi bi-chat"></i> Activo</span>
+                        </div>
+                    </div>
+                    <div class="grupo-footer">
                         <a href="https://t.me/CochesVentayAlquiler" target="_blank" rel="noopener noreferrer" class="btn-grupo">
-                            Unirme <i class="bi bi-telegram"></i>
+                            <i class="bi bi-telegram"></i>
+                            Unirse al Grupo
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="grupo-item">
+
+                <div class="grupo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="grupo-header">
+                        <div class="grupo-icon">
+                            <img src="imagenes/moto2.png" alt="Motos">
+                        </div>
+                        <div class="grupo-badge">Motocicletas</div>
+                    </div>
+                    <div class="grupo-content">
                         <h3>Motos Segunda Mano</h3>
-                        <p>Comunidad para la Venta de Motos de segunda mano</p>
-                        <img src="imagenes/moto2.png" alt="">
+                        <p>Especializado en la venta de motocicletas de segunda mano. Conecta con vendedores y compradores de confianza.</p>
+                        <div class="grupo-stats">
+                            <span><i class="bi bi-people"></i> 620 miembros</span>
+                            <span><i class="bi bi-chat"></i> Activo</span>
+                        </div>
+                    </div>
+                    <div class="grupo-footer">
                         <a href="https://t.me/MotosSegundaMano" target="_blank" rel="noopener noreferrer" class="btn-grupo">
-                            Unirme <i class="bi bi-telegram"></i>
+                            <i class="bi bi-telegram"></i>
+                            Unirse al Grupo
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="grupo-item">
+
+                <div class="grupo-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="grupo-header">
+                        <div class="grupo-icon">
+                            <img src="imagenes/Empleos.png" alt="Empleos">
+                        </div>
+                        <div class="grupo-badge">Empleo</div>
+                    </div>
+                    <div class="grupo-content">
                         <h3>Empleos Comunidad Valenciana</h3>
-                        <p>Comunidad para la Oferta y Demanda de Empleo en la Comunidad Valenciana</p>
-                        <img src="imagenes/Empleos.png" alt="">
+                        <p>Oportunidades laborales en la Comunidad Valenciana. Conecta con empresas y encuentra tu próximo empleo.</p>
+                        <div class="grupo-stats">
+                            <span><i class="bi bi-people"></i> 1.8K miembros</span>
+                            <span><i class="bi bi-chat"></i> Muy activo</span>
+                        </div>
+                    </div>
+                    <div class="grupo-footer">
                         <a href="https://t.me/EmpleosCV" target="_blank" rel="noopener noreferrer" class="btn-grupo">
-                            Unirme <i class="bi bi-telegram"></i>
+                            <i class="bi bi-telegram"></i>
+                            Unirse al Grupo
                         </a>
                     </div>
                 </div>
-                
-                <!-- Añade más grupos aquí -->
+            </div>
+
+            <div class="grupos-cta" data-aos="fade-up" data-aos-delay="500">
+                <div class="cta-content">
+                    <h3>¿Tienes una idea para un nuevo grupo?</h3>
+                    <p>Ayudamos a crear y gestionar nuevas comunidades especializadas</p>
+                    <a href="#contacto" class="btn-outline">
+                        <i class="bi bi-plus-circle"></i>
+                        Proponer Nuevo Grupo
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Tutoriales (placeholder) -->
-    <section id="tutoriales" class="tutoriales seccion-oscura">
-        <div class="container text-center">
-            <h2 class="seccion-titulo">Tutoriales</h2>
-            <p>Próximamente: Guías y recursos para sacarle el máximo partido a Telegram y tus proyectos.</p>
+    <!-- Tutoriales -->
+    <section id="tutoriales" class="tutoriales">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Aprende con nosotros</span>
+                <h2 class="section-title">Tutoriales y Recursos</h2>
+                <p class="section-description">
+                    Guías detalladas y recursos para aprovechar al máximo Telegram y las herramientas de cada comunidad.
+                </p>
+            </div>
+            
+            <div class="coming-soon" data-aos="fade-up" data-aos-delay="200">
+                <div class="coming-soon-icon">
+                    <i class="bi bi-rocket-takeoff"></i>
+                </div>
+                <h3>Contenido en Desarrollo</h3>
+                <p>Estamos preparando tutoriales increíbles para ti. ¡Pronto tendrás acceso a guías detalladas sobre:</p>
+                <ul class="feature-list">
+                    <li><i class="bi bi-check-circle"></i> Configuración avanzada de Telegram</li>
+                    <li><i class="bi bi-check-circle"></i> Mejores prácticas para comunidades</li>
+                    <li><i class="bi bi-check-circle"></i> Automatización con bots</li>
+                    <li><i class="bi bi-check-circle"></i> Seguridad y privacidad</li>
+                </ul>
+                <div class="notification-signup">
+                    <p>¿Quieres ser notificado cuando estén listos?</p>
+                    <a href="#contacto" class="btn-primary">
+                        <i class="bi bi-bell"></i>
+                        Notificarme
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contacto -->
-<section id="contacto" class="contacto seccion-clara">
-    <div class="container text-center">
-        <h2 class="seccion-titulo">Contacto</h2>
-        <p>¿Tienes alguna idea o quieres colaborar? Contáctame por cualquiera de estos medios.</p>
-        
-        <div class="contacto-opciones">
-            <div class="contacto-opcion">
-                <i class="bi bi-envelope-fill"></i>
-                <h3>Email</h3>
-                <p>creagrames@gmail.com</p>
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Conecta con nosotros</span>
+                <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+                <p class="section-description">
+                    Estamos aquí para ayudarte. Contáctanos por cualquiera de estos medios o envíanos un mensaje directo.
+                </p>
             </div>
-            <div class="contacto-opcion">
-                <a href="https://t.me/creagramES" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram"></i></a>
-                <h3>Telegram</h3>
-                <p>@creagramES</p>
-            </div>
-            <div class="contacto-opcion">
-                <a href="https://twitter.com/creagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
-                <h3>Twitter</h3>
-                <p>@creagram</p>
+
+            <div class="contacto-content">
+                <div class="contacto-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contacto-methods">
+                        <div class="contacto-method">
+                            <div class="method-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p><a href="/cdn-cgi/l/email-protection#95f6fafbe1f4f6e1fad5f6e7f0f4f2e7f4f8bbf0e6"><span class="__cf_email__" data-cfemail="4b2824253f2a283f240b28392e2a2c392a26652e38">[email&#160;protected]</span></a></p>
+                                <span class="response-time">Respuesta en 24h</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-method">
+                            <div class="method-icon">
+                                <i class="bi bi-telegram"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Telegram</h4>
+                                <p><a href="https://t.me/creagramES" target="_blank" rel="noopener">@creagramES</a></p>
+                                <span class="response-time">Respuesta inmediata</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-method">
+                            <div class="method-icon">
+                                <i class="bi bi-twitter"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Twitter</h4>
+                                <p><a href="https://twitter.com/creagram" target="_blank" rel="noopener">@creagram</a></p>
+                                <span class="response-time">Respuesta en horas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacto-form" data-aos="fade-left" data-aos-delay="300">
+                    <form id="contact-form" class="modern-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un tema</option>
+                                <option value="grupo-nuevo">Proponer nuevo grupo</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="general">Consulta general</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">
+                            <i class="bi bi-send"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-        
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-cta">Enviar Mensaje</button>
-        </form>
-    </div>
-</section>
+    </section>
 
-   <!-- Footer -->
-<footer class="seccion-oscura">
-    <div class="container footer-content">
-        <img src="imagenes/logo4.png" alt="Logo CreaGram" class="footer-logo">
-        <p>CreaGram © 2025 - Creado por José Cervera</p>
-        <div class="social-links">
-            <a href="https://t.me/creagramES" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram"></i></a>
-            <a href="https://twitter.com/creagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="imagenes/logo4.png" alt="Logo CreaGram" class="footer-logo">
+                    <span class="brand-text">CreaGram</span>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CreaGram - Creado con ❤️ por CerveretaDev</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://t.me/creagramES" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="https://twitter.com/creagram" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <!-- Script para navegación dinámica (opcional) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
